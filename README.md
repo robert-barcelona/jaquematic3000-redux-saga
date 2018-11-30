@@ -9,7 +9,8 @@ This is a MERN stack application and as such uses
 - Mongoose
 - MongoDB
 - React
-- SocketIO
+- Redux
+- Redux-saga
 - SCSS
 
 In addition, testing was done with 
@@ -17,11 +18,6 @@ In addition, testing was done with
 - Mocha
 - Chai
 
-A second, "lite", version was also created that runs entirely on REST API calls, without using socketIO.
-
-
+This version relies on polling instead of socketIO.  It uses redux and redux-saga.
 ## [Documentation](docs/README.md)
 
-## [Live demo](https://jaquematic3000.surge.sh) 
-
-## [Live demo without socketIO](https://jaquematic-lite.surge.sh) 
