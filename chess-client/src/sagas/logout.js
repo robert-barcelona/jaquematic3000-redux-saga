@@ -6,7 +6,7 @@ import {onError, clearCurrentGames,clearNickname,clearToken,clearUsers, stopPoll
 export default function* logout() {
   while (true) {
     yield take(actionTypes.LOGOUT)
-    console.log('logout Saga received action')
+   // console.log('logout Saga received action')
     try {
       yield  put(clearCurrentGames())
       yield  put(clearNickname())

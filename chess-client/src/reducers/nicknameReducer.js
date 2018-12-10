@@ -2,7 +2,7 @@ import actionTypes from '../actions/actionTypes'
 
 
 const nicknameReducer = (state = '', action) => {
-  console.log('in nickname reducer, action =',action)
+ // console.log('in nickname reducer, action =',action)
   switch (action.type) {
     case actionTypes.UPDATE_NICKNAME:
       const nickname = action.payload.nickname

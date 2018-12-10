@@ -65,7 +65,7 @@ class App extends Component {
     let nickname, token
 
     super(props)
-    log.setLevel('debug')
+    log.setLevel('silent')
     this.set = {}
     if (sessionStorage.getItem('nickname')) // we are returning from a page refresh
     {

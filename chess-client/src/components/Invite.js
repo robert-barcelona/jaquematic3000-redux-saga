@@ -40,7 +40,7 @@ class Invite extends Component {
     const {props: {onUserSearchByString}} = this
     const term = e.target.value
     this.setState({userSearchTerm: term})
-    console.log(`INVITE.JS: onKeepUserSearchTermAndDoSearch, term = ${term}`)
+   // console.log(`INVITE.JS: onKeepUserSearchTermAndDoSearch, term = ${term}`)
     onUserSearchByString(term)
 
   }

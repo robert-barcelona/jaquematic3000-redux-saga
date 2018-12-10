@@ -52,7 +52,7 @@ class Games extends Component {
         if (game.toPlay === nickname) {
           onGameMove(move, gameID)
         } else {
-          this.onError("It's not your turn")
+          this.onError({message:"It's not your turn"})
         }
       }
     }

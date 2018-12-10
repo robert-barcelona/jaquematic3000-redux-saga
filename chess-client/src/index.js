@@ -20,7 +20,7 @@ const store = createStore(
     applyMiddleware( sagaMiddleware)
   ))
 
-console.log("Index.js store =", store)
+//console.log("Index.js store =", store)
 sagaMiddleware.run(rootSaga)
 
 ReactDOM.render(<HashRouter><Provider store={store}><App/></Provider></HashRouter>, document.getElementById('root'));

@@ -11,7 +11,7 @@ const POLL_TIME = 2000
 
 function* tick(nickname,token) {
   while(true) {
-    console.log(`polling for ${nickname}`)
+ //   console.log(`polling for ${nickname}`)
     yield call(delay, POLL_TIME);
     yield put(getCurrentGames(nickname,token));
   }

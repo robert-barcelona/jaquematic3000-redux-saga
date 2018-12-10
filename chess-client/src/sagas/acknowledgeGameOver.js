@@ -6,7 +6,7 @@ import logic from '../logic/'
 export default function* acknowledgeGameOver() {
   while (true) {
     const {payload: {nickname, gameID, token}} = yield take(actionTypes.ACKNOWLEDGE_GAME_OVER)
-    console.log('acknowledgeGameOver Saga received action', nickname, gameID, token)
+    //console.log('acknowledgeGameOver Saga received action', nickname, gameID, token)
     try {
       yield call(logic.onAcknowledgeGameOver().bind(logic), nickname, gameID, token)
       yield put(getCurrentGames())

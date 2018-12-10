@@ -11,7 +11,7 @@ import logout from './logout'
 import polling from './polling'
 
 export default function* rootSaga() {
-  console.log("Starting root saga")
+ // console.log("Starting root saga")
   yield all(
     [
       fork(updateCurrentGames),

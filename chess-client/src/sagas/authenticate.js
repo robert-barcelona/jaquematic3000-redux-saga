@@ -7,7 +7,7 @@ export default function * authenticate() {
 
   while (true) {
     const {payload:{nickname,password}}  = yield take(actionTypes.AUTHENTICATE)
-    console.log('authenticate Saga received action', nickname,password)
+    //console.log('authenticate Saga received action', nickname,password)
     try {
       const token = yield call(logic.authenticate.bind(logic),nickname,password)
       yield put(getCurrentGames(nickname,token))
@@ -15,6 +15,10 @@ export default function * authenticate() {
       yield put(updateToken(token))
       yield put(startPolling())
     } catch (e) {
+     // console.log('authenticate Saga error', e)
+      const error = e
+
+      debugger
       yield put(onError(e))
     }
   }

@@ -7,11 +7,12 @@ export default function * gameMove() {
 
   while (true) {
     const {payload:{nickname,move,gameID,token}}  = yield take(actionTypes.GAME_MOVE)
-    console.log('gameMove Saga received action', nickname,move,gameID,token)
+   // console.log('gameMove Saga received action', nickname,move,gameID,token)
     try {
       yield call(logic.makeAGameMove.bind(logic),nickname,move,gameID, token)
       yield put(getCurrentGames(nickname,token))
     } catch (e) {
+     // console.log('gameMove Saga error', e)
       yield put(onError(e))
     }
   }
